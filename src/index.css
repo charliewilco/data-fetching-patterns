@@ -1,0 +1,97 @@
+@keyframes pulse {
+  50% {
+    opacity: 50%;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.ProductGrid,
+.LoadingContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.ProductGrid {
+  padding: 1rem;
+  list-style: none;
+}
+
+.LoadingContainer {
+  padding: 0;
+  margin: 1rem;
+  user-select: none;
+}
+
+.Content {
+  background-color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.ContentMedia {
+  display: flex;
+  gap: 1rem;
+}
+
+.Content img {
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.Content h1 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.Content p {
+  margin: 0;
+  font-size: 0.875rem;
+  opacity: .75;
+}
+
+.LoadingItem {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  height: 2rem;
+  width: 100%;
+  border-radius: .125rem;
+  background: hsla(0, 0%, 97%, 0.75);
+}
+
+.LoadingItem:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.LoadingItem.tiny {
+  height: 1rem;
+  width: 87.5%;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  background: #222;
+  color: #f7f7f7;
+  padding: 0;
+  margin: 0;
+}
